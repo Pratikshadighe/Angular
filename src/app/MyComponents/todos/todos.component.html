@@ -2,7 +2,8 @@
     <h1 class="text-center">Todo List</h1>
     </div>
 <app-add-todo (todoAdd)="addTodo($event)" ></app-add-todo>
-<h4>Your Todos</h4>
+
+<h4 class="container">Your Todos</h4>
 <div *ngIf="this.todo?.length===0; else elseBlock">No Todos yet</div>
 <ng-template #elseBlock>
 <div *ngFor="let todo of todo; index as i" >
